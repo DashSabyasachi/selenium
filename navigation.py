@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import time
 
 # driver=webdriver.Chrome()
@@ -24,12 +25,69 @@ import time
 
 
 # ......
-driver=webdriver.Chrome()
-driver.maximize_window()
+# driver=webdriver.Chrome()
+# driver.maximize_window()
 
-driver.get("https://amazon.in")
-driver.minimize_window()
+# driver.get("https://amazon.in")
+# driver.minimize_window()
+# time.sleep(2)
+
+
+
+# xpath assignment
+driver = webdriver.Chrome()
+driver.maximize_window()
+time.sleep(5)
+driver.get("https://rahulshettyacademy.com/AutomationPractice/")
+
+autocomplete_xpath  = driver.find_element(By.XPATH,"//input[@id='autocomplete']")
+print("Autocomplete found by XPATH:", autocomplete_xpath.get_attribute("id"))
+
+autocomplete_id = driver.find_element(By.ID, "autocomplete")
+print("Autocomplete found by ID:", autocomplete_id.get_attribute("id"))
+
 time.sleep(2)
 
-driver.find_element(By.class, value: 'ap-locale-en_US a-m-us a-aui_72554-c a-aui_template_weblab_cache_333406-c a-meter-animate')
+
+name_xpath = driver.find_element(By.XPATH,"//input[@id='name']")
+print("Name input found by XPATH:", name_xpath.get_attribute("id"))
+
+
+name_by_name = driver.find_element(By.NAME, "enter-name")
+print("Name input found by NAME:", name_by_name.get_attribute("name"))
+
+time.sleep(2)
+
+driver.quit()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
