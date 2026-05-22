@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a186c5ab-9f62-437a-a7e8-f110050bf7b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/automate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Selenium.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Selenium.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation.py" beforeDir="false" afterPath="$PROJECT_DIR$/navigation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automate.py" beforeDir="false" afterPath="$PROJECT_DIR$/automate.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +47,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.automate.executor&quot;: &quot;Run&quot;,
     &quot;Python.navigation.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,

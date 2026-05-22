@@ -20,7 +20,6 @@ time.sleep(2)
 # ---- Click Alert button ----
 driver.find_element(By.ID, "alertbtn").click()   # ← alert popup will appear!
 time.sleep(2)
-
 alert = driver.switch_to.alert
 print("Alert says:", alert.text)
 alert.accept()   # ← clicks OK on the popup
