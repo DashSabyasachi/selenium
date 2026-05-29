@@ -109,40 +109,54 @@
 
 
 
-# # Assignment ( Full automation for Facebook login )
+# # # Assignment ( Full automation for Facebook login )
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# import time
+#
+# # Step 1: Open Chrome
+# driver = webdriver.Chrome()
+# driver.maximize_window()
+#
+# # Step 2: Open Facebook login page
+# driver.get("https://www.facebook.com/login/")
+# time.sleep(3)
+#
+# # Step 3: Enter email
+# email = driver.find_element(By.NAME, "email")
+# email.clear()
+# email.send_keys("sabyasachidash2017@gmail.com")   # replace with your email
+# time.sleep(1)
+#
+# # Step 4: Enter password
+# password = driver.find_element(By.NAME, "pass")
+# password.clear()
+# password.send_keys("01a4853")       # replace with your password
+# time.sleep(1)
+#
+# # Step 5: Click Login button
+# driver.find_element(By.XPATH, "//span[text()='Log in']")
+#
+# driver.find_element(By.XPATH, "//span[text()='Log in']").click()
+# time.sleep(10)
+# driver.quit()
+
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 
-# Step 1: Open Chrome
-driver = webdriver.Chrome()
-driver.maximize_window()
+driver=webdriver.Chrome()
+driver.get('https://demoga.com/text-box')
 
-# Step 2: Open Facebook login page
-driver.get("https://www.facebook.com/login/")
-time.sleep(3)
+wait=WebDriverWait(driver, 5)
+textbox=wait.until(EC.visibility_of_element_located((By.ID, "userName")))
 
-# Step 3: Enter email
-email = driver.find_element(By.NAME, "email")
-email.clear()
-email.send_keys("sabyasachidash2017@gmail.com")   # replace with your email
-time.sleep(1)
-
-# Step 4: Enter password
-password = driver.find_element(By.NAME, "pass")
-password.clear()
-password.send_keys("01a4853")       # replace with your password
-time.sleep(1)
-
-# Step 5: Click Login button
-driver.find_element(By.XPATH, "//span[text()='Log in']")
-
-driver.find_element(By.XPATH, "//span[text()='Log in']").click()
-time.sleep(10)
+textbox.send_keys('sankar')
+#time.sleep(2)
 driver.quit()
-
-
-
 
 
 
