@@ -142,21 +142,21 @@
 # driver.quit()
 
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import time
-
-driver=webdriver.Chrome()
-driver.get('https://demoga.com/text-box')
-
-wait=WebDriverWait(driver, 5)
-textbox=wait.until(EC.visibility_of_element_located((By.ID, "userName")))
-
-textbox.send_keys('sankar')
-#time.sleep(2)
-driver.quit()
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+# import time
+#
+# driver=webdriver.Chrome()
+# driver.get('https://demoga.com/text-box')
+#
+# wait=WebDriverWait(driver, 5)
+# textbox=wait.until(EC.visibility_of_element_located((By.ID, "userName")))
+#
+# textbox.send_keys('sankar')
+# #time.sleep(2)
+# driver.quit()
 
 
 
