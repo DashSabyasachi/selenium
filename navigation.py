@@ -142,6 +142,17 @@
 # driver.quit()
 
 
+# Your code — just finds element, never clicks!
+driver.find_element(By.XPATH, "//span[text()='Log in']")
+
+# Fix — add .click()
+driver.find_element(By.XPATH, "//span[text()='Log in']").click()
+
+
+
+
+
+
 # from selenium import webdriver
 # from selenium.webdriver.common.by import By
 # from selenium.webdriver.support.ui import WebDriverWait
@@ -157,6 +168,9 @@
 # textbox.send_keys('sankar')
 # #time.sleep(2)
 # driver.quit()
+
+
+
 
 
 
