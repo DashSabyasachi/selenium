@@ -142,11 +142,11 @@
 # driver.quit()
 
 
-# Your code — just finds element, never clicks!
-driver.find_element(By.XPATH, "//span[text()='Log in']")
-
-# Fix — add .click()
-driver.find_element(By.XPATH, "//span[text()='Log in']").click()
+# # Your code — just finds element, never clicks!
+# driver.find_element(By.XPATH, "//span[text()='Log in']")
+#
+# # Fix — add .click()
+# driver.find_element(By.XPATH, "//span[text()='Log in']").click()
 
 
 
@@ -173,9 +173,44 @@ driver.find_element(By.XPATH, "//span[text()='Log in']").click()
 
 
 
+'''
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
+import time
 
+driver = webdriver.Chrome()
+driver.maximize_window()
+driver.get("https://www.facebook.com/login/")
+time.sleep(3)
 
+# Enter email
+email = driver.find_element(By.NAME, "email")
+email.clear()
+email.send_keys("sabyasachidash2017@gmail.com")
+time.sleep(1)
 
+# Enter password
+password = driver.find_element(By.NAME, "pass")
+password.clear()
+password.send_keys("01a4853")
+time.sleep(1)
+
+# Click login button
+driver.find_element(By.XPATH, "//span[text()='Log in']").click()
+time.sleep(5)  # wait for page to load after login
+
+# Check login success or failure
+try:
+    # This element only appears when logged in
+    driver.find_element(By.XPATH, "//div[@aria-label='Facebook']")
+    print("✅ Login Successful!")
+except NoSuchElementException:
+    print("❌ Login Failed! Check email or password.")
+
+time.sleep(3)
+driver.quit()
+'''
 
 
 
