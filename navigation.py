@@ -212,8 +212,22 @@ time.sleep(3)
 driver.quit()
 '''
 
-
-
+# # 1. Waits
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+#
+# driver = webdriver.Chrome()
+# driver.get("https://rahulshettyacademy.com/AutomationPractice/")
+#
+# # Implicit Wait — applies to all find_element calls globally
+# driver.implicitly_wait(10)  # waits max 10 seconds
+#
+# # Explicit Wait — waits for a specific element
+# wait = WebDriverWait(driver, 10)
+# element = wait.until(EC.presence_of_element_located((By.ID, "autocomplete")))
+# print("Element found:", element.get_attribute("id"))
 
 
 
