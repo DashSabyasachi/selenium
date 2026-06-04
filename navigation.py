@@ -231,7 +231,26 @@ driver.quit()
 
 
 
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
 
+driver=webdriver.Chrome()
+# for check single checkbox
+driver.get('https://rahulshettyacademy.com/AutomationPractice/')
+# checkbox=driver.find_element(By.NAME,"checkBoxOption1")
+# checkbox.click()
+# print(checkbox.is_selected())
+# time.sleep(2)
+
+# for multiple checkbox
+# checkboxes=driver.find_elements(By.XPATH,'//input[@type="checkbox"]')
+# for checkbox in checkboxes:
+# checkbox.click()
+# time.sleep(3)
+# driver.quit()
+checkboxes = driver.find_elements(By.XPATH, "//input[@type='checkbox']")
+print(len(checkboxes))
 
 
 
