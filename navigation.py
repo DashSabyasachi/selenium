@@ -256,4 +256,20 @@ print(len(checkboxes))
 
 
 
+from selenium.webdriver.support.ui import Select
 
+driver.get("https://rahulshettyacademy.com/AutomationPractice/")
+
+dropdown = driver.find_element(By.ID, "dropdown-class-example")
+select = Select(dropdown)
+
+# Select by visible text
+select.select_by_visible_text("Option1")
+
+# Select by index
+select.select_by_index(2)
+
+# Select by value
+select.select_by_value("option2")
+
+print("Selected:", select.first_selected_option.text)
