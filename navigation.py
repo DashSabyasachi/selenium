@@ -252,7 +252,7 @@ driver.get('https://rahulshettyacademy.com/AutomationPractice/')
 checkboxes = driver.find_elements(By.XPATH, "//input[@type='checkbox']")
 print(len(checkboxes))
 
-
+# https://demo.automationtesting.in/Alerts.html
 
 
 
