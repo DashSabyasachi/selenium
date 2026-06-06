@@ -255,21 +255,44 @@ print(len(checkboxes))
 # https://demo.automationtesting.in/Alerts.html
 
 
+#
+# from selenium.webdriver.support.ui import Select
+#
+# driver.get("https://rahulshettyacademy.com/AutomationPractice/")
+#
+# dropdown = driver.find_element(By.ID, "dropdown-class-example")
+# select = Select(dropdown)
+#
+# # Select by visible text
+# select.select_by_visible_text("Option1")
+#
+# # Select by index
+# select.select_by_index(2)
+#
+# # Select by value
+# select.select_by_value("option2")
+#
+# print("Selected:", select.first_selected_option.text)
 
-from selenium.webdriver.support.ui import Select
 
-driver.get("https://rahulshettyacademy.com/AutomationPractice/")
 
-dropdown = driver.find_element(By.ID, "dropdown-class-example")
-select = Select(dropdown)
 
-# Select by visible text
-select.select_by_visible_text("Option1")
 
-# Select by index
-select.select_by_index(2)
-
-# Select by value
-select.select_by_value("option2")
-
-print("Selected:", select.first_selected_option.text)
+# driver.get("https://rahulshettyacademy.com/AutomationPractice/")
+#
+# # Type name and click Alert button
+# driver.find_element(By.ID, "name").send_keys("Sabya")
+# driver.find_element(By.ID, "alertbtn").click()
+#
+# # Switch to alert and accept
+# alert = driver.switch_to.alert
+# print("Alert text:", alert.text)
+# alert.accept()  # clicks OK
+#
+# # Type name and click Confirm button
+# driver.find_element(By.ID, "name").send_keys("Sabya")
+# driver.find_element(By.ID, "confirmbtn").click()
+#
+# confirm = driver.switch_to.alert
+# print("Confirm text:", confirm.text)
+# confirm.dismiss()  # clicks Cancel
