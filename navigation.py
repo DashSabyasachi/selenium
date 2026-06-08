@@ -296,3 +296,40 @@ print(len(checkboxes))
 # confirm = driver.switch_to.alert
 # print("Confirm text:", confirm.text)
 # confirm.dismiss()  # clicks Cancel
+
+
+
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()
+driver.get('https://rahulshettyacademy.com/AutomationPractice/')
+
+# Count all rows
+rows = driver.find_elements(By.XPATH, "//table[@name='courses']//tr")
+print('Rows:', len(rows))
+
+# Count all columns
+columns = driver.find_elements(By.XPATH, "//table[@name='courses']//th")
+print('Columns:', len(columns))
+
+# Print entire table
+for row in rows:
+    print(row.text)
+
+# Get specific cell value — row 5, column 3
+cell = driver.find_element(By.XPATH, "//table[@name='courses']//tr[5]/td[3]")
+print("Cell value:", cell.text)
+
+# Print all course names — column 2
+all_course = driver.find_elements(By.XPATH, "//table[@name='courses']//tr/td[2]")
+for course in all_course:
+    print(course.text)
+
+# Print first column data
+first_column_data = driver.find_elements(By.XPATH, "//table[@name='courses']//tr/td[1]")
+for col_data in first_column_data:
+    print(col_data.text)   # ← properly indented
+
+driver.quit()
