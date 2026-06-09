@@ -338,20 +338,47 @@ print(len(checkboxes))
 
 
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver import ActionChains
-import time
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver import ActionChains
+# import time
+#
+# driver=webdriver.Chrome()
+# driver.maximize_window()
+# driver.get('https://demoqa.com/buttons')
+# button=driver.find_element(By.ID,"rightClickBtn")
+#
+# action=ActionChains(driver)
+# action.context_click(button).perform()
+# time.sleep(3)
+#
+# message = driver.find_element(By.ID,"rightClickMessage")
+# print(message.text)
+# driver.quit()
 
-driver=webdriver.Chrome()
-driver.maximize_window()
-driver.get('https://demoqa.com/buttons')
-button=driver.find_element(By.ID,"rightClickBtn")
 
-action=ActionChains(driver)
-action.context_click(button).perform()
-time.sleep(3)
 
-message = driver.find_element(By.ID,"rightClickMessage")
-print(message.text)
-driver.quit()
+
+# # For Drag Drop:--→
+# # ‌
+# import time
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver import ActionChains
+#
+# driver=webdriver.Chrome()
+# driver.get("https://jqueryui.com/droppable/")
+#
+# # switch to frame
+# frame=driver.find_element(By.CLASS_NAME,"demo-frame")
+# driver.switch_to.frame(frame)
+#
+# drag=driver.find_element(By.ID,"draggable")
+#
+# drop=driver.find_element(By.ID,"droppable")
+#
+# actions=ActionChains(driver)
+# actions.drag_and_drop(drag,drop).perform()
+# time.sleep(2)
+
+
