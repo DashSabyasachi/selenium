@@ -383,21 +383,58 @@ print(len(checkboxes))
 
 
 
-# For File download:-→
-# ‌
-import os
-import time
-from selenium import webdriver
-from selenium.webdriver.common.by import By
+# # For File download:-→
+# # ‌
+# import os
+# import time
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+#
+# driver=webdriver.Chrome()
+# driver.get("https://the-internet.herokuapp.com/download")
+#
+# driver.find_element(By.LINK_TEXT,"random_data.txt").click()
+# time.sleep(3)
+#
+# file_path=r"C:\Users\Admin\Downloads\random_data.txt"
+# print(os.path.exists(file_path))
+#
+# driver.quit()
 
-driver=webdriver.Chrome()
-driver.get("https://the-internet.herokuapp.com/download")
 
-driver.find_element(By.LINK_TEXT,"random_data.txt").click()
-time.sleep(3)
 
-file_path=r"C:\Users\Admin\Downloads\random_data.txt"
-print(os.path.exists(file_path))
+# # For Fileupload:--→
+# import time
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+#
+# driver=webdriver.Chrome()
+# driver.get("https://the-internet.herokuapp.com/upload")
+#
+# driver.find_element(By.ID,"file-upload").send_keys(r"C:\Users\Admin\Documents\19_intro.txt")
+# time.sleep(3)
+# driver.find_element(By.ID,"file-submit").click()
+# time.sleep(3)
+# driver.quit()
 
-driver.quit()
+
+
+# #For Screenshot:-→
+# # ‌
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# import time
+#
+# driver = webdriver.Chrome()
+#
+# driver.get(
+# "https://rahulshettyacademy.com/AutomationPractice/"
+# )
+#
+# # driver.save_screenshot('homepage.png')
+# text_box=driver.find_element(By.ID,"name")
+# text_box.screenshot(r"C:\Users\Admin\PycharmProjects\PythonProject\screenshot\text.png")
+# time.sleep(2)
+# driver.quit()
+
 
