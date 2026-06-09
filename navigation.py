@@ -382,3 +382,22 @@ print(len(checkboxes))
 # time.sleep(2)
 
 
+
+# For File download:-→
+# ‌
+import os
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver=webdriver.Chrome()
+driver.get("https://the-internet.herokuapp.com/download")
+
+driver.find_element(By.LINK_TEXT,"random_data.txt").click()
+time.sleep(3)
+
+file_path=r"C:\Users\Admin\Downloads\random_data.txt"
+print(os.path.exists(file_path))
+
+driver.quit()
+
