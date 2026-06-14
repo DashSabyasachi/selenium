@@ -477,34 +477,39 @@ print(len(checkboxes))
 
 
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver import ActionChains
-import time
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver import ActionChains
+# import time
+#
+# driver = webdriver.Chrome()
+# driver.maximize_window()
+# driver.get('https://demoqa.com/buttons')
+# time.sleep(2)
+#
+# action = ActionChains(driver)
+#
+# # Double Click
+# double_btn = driver.find_element(By.ID, "doubleClickBtn")
+# action.double_click(double_btn).perform()
+# time.sleep(1)
+# print(driver.find_element(By.ID, "doubleClickMessage").text)
+#
+# # Right Click
+# right_btn = driver.find_element(By.ID, "rightClickBtn")
+# action.context_click(right_btn).perform()
+# time.sleep(1)
+# print(driver.find_element(By.ID, "rightClickMessage").text)
+#
+# # Single Click — dynamic button at bottom
+# click_btn = driver.find_element(By.XPATH, "//button[text()='Click Me']")
+# click_btn.click()
+# time.sleep(1)
+# print(driver.find_element(By.ID, "dynamicClickMessage").text)
+#
+# driver.quit()
 
-driver = webdriver.Chrome()
-driver.maximize_window()
-driver.get('https://demoqa.com/buttons')
-time.sleep(2)
 
-action = ActionChains(driver)
 
-# Double Click
-double_btn = driver.find_element(By.ID, "doubleClickBtn")
-action.double_click(double_btn).perform()
-time.sleep(1)
-print(driver.find_element(By.ID, "doubleClickMessage").text)
 
-# Right Click
-right_btn = driver.find_element(By.ID, "rightClickBtn")
-action.context_click(right_btn).perform()
-time.sleep(1)
-print(driver.find_element(By.ID, "rightClickMessage").text)
 
-# Single Click — dynamic button at bottom
-click_btn = driver.find_element(By.XPATH, "//button[text()='Click Me']")
-click_btn.click()
-time.sleep(1)
-print(driver.find_element(By.ID, "dynamicClickMessage").text)
-
-driver.quit()
