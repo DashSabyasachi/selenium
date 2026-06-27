@@ -537,3 +537,58 @@ print(len(checkboxes))
 
 
 
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+
+driver=webdriver.Chrome()
+driver.maximize_window()
+driver.get("https://rahulshettyacademy.com/AutomationPractice/")
+time.sleep(2)
+
+# textbox=driver.find_element(By.ID,"name")
+# # Enter text using js
+# driver.execute_script("arguments[0].value='Amar';",textbox)
+# time.sleep(1)
+#
+# # Highlight the textbox
+# driver.execute_script("arguments[0].style.border='3px solid red';",textbox)
+# time.sleep(1)
+#
+# # Get page title
+# title=driver.execute_script("return document.title;")
+# print('page title:',title)
+# time.sleep(1)
+
+# scroll Down
+# driver.execute_script("window.scrollBy(0,1050)")
+# time.sleep(2)
+
+# scroll Up
+# driver.execute_script(("window.scrollBy(0,-950)"))
+# time.sleep(2)
+
+# locate mouse hover button
+#mouse_hover=driver.find_element(By.ID,"mousehover")
+# Scroll to Element
+#driver.execute_script("arguments[0].scrollIntoView();",mouse_hover)
+#time.sleep(2)
+
+#scroll to top
+#driver.execute_script("window.scrollTo(0,0)")
+#time.sleep(2)
+
+#scroll to Bottom
+#driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+#time.sleep(2)
+
+# javascript click
+# open_window=driver.find_element(By.ID,"openwindow")
+# driver.execute_script("arguments[0].click();",open_window)
+# time.sleep(2)
+
+# Refresh page
+# driver.execute_script("history.go(0)")
+# time.sleep(2)
+# driver.quit()
