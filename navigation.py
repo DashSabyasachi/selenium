@@ -592,3 +592,52 @@ time.sleep(2)
 # driver.execute_script("history.go(0)")
 # time.sleep(2)
 # driver.quit()
+
+
+
+
+#
+from selenium.webdriver.common.by import By
+
+class InventoryPage:
+    add_to_cart_btn='add-to-cart-sauce-labs-backpack'
+    cart_btn='shopping_cart_link'
+
+    def __init__(self,driver):
+        self.driver=driver
+
+    def click_add_to_cart(self):
+        self.driver.find_element(By.ID,self.add_to_cart_btn).click()
+
+    def click_cart(self):
+        self.driver.find_element(By.CLASS_NAME,self.cart_btn).click()
+
+#
+from pages.inventory_page import InventoryPage
+from utils.common import Common
+
+def test_add_to_cart(setup):
+    driver=setup
+
+    Common.login(driver, 'standard_user', 'secret_sauce')
+
+    inventory=InventoryPage(driver)
+    inventory.click_add_to_cart()
+    inventory.click_cart()
+
+    assert 'cart' in driver.current_url
+
+
+#
+from selenium.webdriver.common.by import By
+
+
+class CartPage:
+
+    checkout_btn = "checkout"
+
+    def __init__(self, driver):
+        self.driver = driver
+
+    def click_checkout(self):
+        self.driver.find_element(By.NAME, self.checkout_btn).click()
